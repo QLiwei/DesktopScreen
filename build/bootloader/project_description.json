@@ -1,0 +1,20 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/home/qlw/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/home/qlw/esp/DesktopScreen/build/bootloader",
+    "config_file":        "/home/qlw/esp/DesktopScreen/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.1.3-162-g85c878acc5",
+    "target":             "esp32",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "xtensa-esp32-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/home/qlw/esp/esp-idf/components/efuse/Kconfig;/home/qlw/esp/esp-idf/components/esp32/Kconfig;/home/qlw/esp/esp-idf/components/esp_common/Kconfig;/home/qlw/esp/esp-idf/components/log/Kconfig;/home/qlw/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/qlw/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/qlw/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/qlw/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32", "esp_common", "esp_rom", "esptool_py", "log", "main", "micro-ecc", "partition_table", "soc", "spi_flash", "xtensa", "" ],
+    "build_component_paths" : [ "/home/qlw/esp/esp-idf/components/bootloader", "/home/qlw/esp/esp-idf/components/bootloader_support", "/home/qlw/esp/esp-idf/components/efuse", "/home/qlw/esp/esp-idf/components/esp32", "/home/qlw/esp/esp-idf/components/esp_common", "/home/qlw/esp/esp-idf/components/esp_rom", "/home/qlw/esp/esp-idf/components/esptool_py", "/home/qlw/esp/esp-idf/components/log", "/home/qlw/esp/esp-idf/components/bootloader/subproject/main", "/home/qlw/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/home/qlw/esp/esp-idf/components/partition_table", "/home/qlw/esp/esp-idf/components/soc", "/home/qlw/esp/esp-idf/components/spi_flash", "/home/qlw/esp/esp-idf/components/xtensa", "" ]
+}

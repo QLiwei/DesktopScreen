@@ -7,12 +7,16 @@
    CONDITIONS OF ANY KIND, either express or implied.
 */
 #include <stdio.h>
+
+/* esp header file */
 #include "sdkconfig.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_spi_flash.h"
 #include "esp_log.h"
+
+/* freertos header file */
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
 #ifdef CONFIG_IDF_TARGET_ESP32
 #define CHIP_NAME "ESP32"
@@ -23,6 +27,15 @@
 #endif
 
 static const char *TAG = "MAIN APP";
+
+static void test_task_entry(void* arg)
+{
+    for(;;)
+    {
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+         ESP_LOGI(TAG, "test task run \n");
+    }
+}
 
 void app_main(void)
 {
@@ -48,8 +61,10 @@ void app_main(void)
     ESP_LOGD(TAG, "ESP_LOGD");
     ESP_LOGV(TAG, "ESP_LOGV");
 
+    xTaskCreate(test_task_entry, "test_task", 2048, NULL, 10, NULL);
+
     while(1){
-        printf("system run ...\n");
+        ESP_LOGI(TAG, "system run ...\n");
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
